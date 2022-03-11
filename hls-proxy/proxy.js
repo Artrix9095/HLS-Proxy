@@ -43,6 +43,7 @@ const proxy = function({server, host, is_secure, req_headers, req_options, hooks
     res.setHeader('Access-Control-Allow-Headers',     '*')
     res.setHeader('Access-Control-Allow-Credentials', 'true')
     res.setHeader('Access-Control-Max-Age',           '86400')
+    res.setHeader('Cross-Origin-Resource-Policy',     'cross-origin')
   }
 
   const get_request_options = function(url, referer_url) {
