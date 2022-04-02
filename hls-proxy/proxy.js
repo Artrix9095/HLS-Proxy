@@ -47,6 +47,7 @@ const proxy = function({server, host, is_secure, req_headers, req_options, hooks
   }
 
   const get_request_options = function(url, referer_url) {
+    debug(3, 'Request headers:', req_headers)
     if (!req_options && !req_headers && !referer_url) return url
 
     const request_options = Object.assign(
